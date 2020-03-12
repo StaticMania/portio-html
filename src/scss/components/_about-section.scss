@@ -1,0 +1,132 @@
+.port__about{
+    &_header{
+        margin-bottom: 60px;
+        span{
+            display: block;
+            font-size: 20px;
+            font-family: $secondary-font;
+            margin: 0 0 30px 0;
+        }
+        h1{
+            margin: 0 0 20px 0;
+            font-size: 55px;
+            font-family: $primary-font;
+            color: $secondary-color;
+            line-height: 1;
+        }
+        p{
+            margin: 0;
+            font-size: 18px;
+            font-family: $secondary-font;
+            color: #7E7E8A;
+            line-height: 30px;
+        }
+    }
+    &_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        &-thumb{
+            width: 50%;
+            position: relative;
+            @include tablet{
+                width: 100%;
+            }
+            .about-svg{
+                position: absolute;
+                top: -11%;
+                left: -17%;
+                z-index: -1;
+                height: 150px;
+                @include tablet{
+                    top: -7%;
+                    left: -16%;
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .about_content-thumb-image{
+                img{
+                    height: 100%;
+                    width: 100%;
+                    &.about_mask_svg{
+                        mask: url(../images/about/about-mask-svg.svg);
+                        -webkit-mask-repeat: no-repeat;
+                        -webkit-mask-size: contain;
+                        -webkit-mask-position: center center;
+                    }
+                }
+            }
+        }
+        &-inner{
+            width: 50%;
+            padding: 50px;
+            background: #1B2031;
+            border-radius: 20px;
+            margin-left: -60px;
+            position: relative;
+            @include desktop{
+                padding: 25px;
+            }
+            @include tablet{
+                width: 100%;
+                margin-left: 0;
+                margin-top: 30px;
+            }
+            img{
+                position: absolute;
+                top: -40%;
+                right: -40%;
+                z-index: -1;
+                @include tablet{
+                    display: none;
+                }
+            }
+            h3{
+                margin: 0 0 35px 0;
+                color: $white;
+                font-family: $primary-font;
+            }
+            p{
+                margin: 0 0 35px 0;
+                font-size: 15px;
+                font-family: $secondary-font;
+                color: $white;
+                font-weight: 400;
+                line-height: 30px;
+                @include desktop{
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    a{
+                        display: block;
+                        padding: 10px 30px;
+                        text-decoration: none;
+                        color: $white;
+                        background: $primary-color;
+                        border-radius: 7px;
+                        border: 1px solid transparent;
+                        transition: all .3s ease;
+                        &:hover{
+                            border: 1px solid #60636F;
+                            background: transparent;
+                        }
+                    }
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

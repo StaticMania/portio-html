@@ -1,0 +1,121 @@
+.port__hero{
+    padding: 200px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_background-svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 65%;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_footer-svg{
+        position: absolute;
+        bottom: 20px;
+        left: -130px;
+    }
+    &_content{
+        position: relative;
+        @include desktop{
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        svg{
+            position: absolute;
+            z-index: -1;
+            top: -40%;
+            left: -40%;
+        }
+        span{
+            font-size: 24px;
+            font-family: $secondary-font;
+            color: $secondary-color;
+            position: relative;
+            display: block;
+            margin: 0 0 20px 30px;
+            @include desktop{
+                display: inline-block;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                height: 2px;
+                width: 20px;
+                top: 50%;
+                left: -20px;
+                transform: translateX(-50%);
+                background: $secondary-color;
+            }
+        }
+        h1{
+            margin: 0 0 30px 0;
+            font-size: 60px;
+            font-family: $primary-font;
+            color: $secondary-color;
+            line-height: 70px;
+        }
+        p{
+            margin: 0 0 50px 0;
+            font-family: $secondary-font;
+            color: $secondary-color;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        a{
+            display: inline-block;
+            padding: 20px 50px;
+            font-family: $secondary-font;
+            font-size: 16px;
+            background: $primary-color;
+            border-radius: 7px;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid transparent;
+            transition: all .3s ease;
+            &:hover{
+                background: transparent;
+                border: 1px solid $primary-color;
+                color: $primary-color;
+            }
+        }
+    }
+    &_figure{
+        width: 90%;
+        margin-left: auto;
+        border-radius: 20px;
+        position: relative;
+        @include desktop{
+            width: 100%;
+        }
+        .figure-svg{
+            position: absolute;
+            top: -55px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            z-index: -1;
+            height: 150px;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            &.hero_mask_svg{
+                mask: url("../images/hero/hero-mask-svg.png");
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                -webkit-mask-position: center center;
+            }
+        }
+    }
+}

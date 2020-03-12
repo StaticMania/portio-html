@@ -1,0 +1,52 @@
+.section{
+    @include desktop{
+        padding: 50px 0;
+    }
+    .singleBlog{
+        &__feature{
+            margin: 0 100px;
+            @include desktop{
+                margin: 0;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        &__content{
+            margin: 0 200px 0 200px;
+            @include desktop{
+                margin: 0;
+            }
+            p{
+                font-family: $secondary-font;
+                font-size: 16px;
+                line-height: 30px;
+                margin-bottom: 40px;
+                color: #7E7E8A;
+            }
+            dl, ul, ol{
+                margin-top: 0;
+                margin-bottom: 40px;
+                font-family: $secondary-font;
+                font-size: 16px;
+                line-height: 30px;
+                color: #7E7E8A;
+            }
+            blockquote{
+                font-family: $secondary-font;
+                font-size: 16px;
+                line-height: 30px;
+                color: $secondary-color;
+                padding: 30px;
+                background: $white;
+                box-shadow: 0px 20px 40px 0px rgba(50, 65, 141, 0.07);
+                border-radius: 5px;
+                cite{
+                    display: block;
+                }
+            }
+        }
+    }
+}
