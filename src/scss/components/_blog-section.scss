@@ -78,6 +78,9 @@
     &__item{
         position: relative;
         margin-bottom: 20px;
+        @include desktop{
+            margin-bottom: 130px;
+        }
         &-thumb{
             width: 90%;
             height: 100%;
