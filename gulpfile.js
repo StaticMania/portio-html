@@ -204,4 +204,17 @@ gulp.task("build", function() {
   );
 });
 
+gulp.task("build-prod", function() {
+  runSequence(
+    "html:build",
+    "js:build",
+    "scss:build",
+    "images:build",
+    "plugins:build",
+    "fonts:build",
+    "others:build",
+  );
+});
+
+
 gulp.task("default", ["build"]);
