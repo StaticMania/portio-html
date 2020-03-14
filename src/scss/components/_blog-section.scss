@@ -84,6 +84,10 @@
         &-thumb{
             width: 90%;
             height: 100%;
+            @include desktop{
+                width: 80%;
+                margin: 0 auto;
+            }
             img{
                 height: 100%;
                 width: 100%;
@@ -98,6 +102,9 @@
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0px 20px 40px 0px rgba(50,65,141,0.12);
+            @include desktop{
+                left: 0;
+            }
             span{
                 font-size: 16px;
                 font-family: $secondary-font;
@@ -130,6 +137,18 @@
                     color: $primary-color;
                 }
             }
+        }
+    }
+    .mobile{
+        display: none;
+    }
+    @include desktop {
+        .desktop{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            text-align: center;
         }
     }
 }

@@ -101,7 +101,7 @@
         }
         &_sitemap{
             @include desktop{
-                margin: 30px 0;
+                margin: 40px 0;
             }
             h3{
                 font-family: $secondary-font;
@@ -182,7 +182,7 @@
     }
     &__footer{
         padding: 50px 0;
-        border-top: 1px solid #fff;
+        border-top: 1px solid rgba(255, 255, 255, .3);
         @include desktop{
             text-align: center;
         }

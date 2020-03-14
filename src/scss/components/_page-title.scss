@@ -1,5 +1,8 @@
 .breadCrumb{
     padding: 230px 0 0;
+    @include desktop{
+        padding: 120px 0 0;
+    }
     &__title{
         font-size: 48px;
         font-family: $primary-font;
@@ -24,12 +27,18 @@
                 @include mobile{
                     font-size: 14px;
                 }
+                @include mobile-xs{
+                    font-size: 12px;
+                }
             }
             &.active{
                 font-family: $secondary-font;
                 color: $secondary-color;
                 @include mobile{
                     font-size: 14px;
+                }
+                @include mobile-xs{
+                    font-size: 12px;
                 }
             }
         }
@@ -48,5 +57,8 @@
     }
     .breadcrumb-item+.breadcrumb-item{
         padding-left: 10px;
+        @include mobile-xs{
+            padding-right: 0px;
+        }
     }
 }

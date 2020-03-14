@@ -49,28 +49,28 @@
                     color: $secondary-color;
                     font-size: 25px;
                 }
-                a{
-                    text-decoration: none;
-                    display: inline-block;
-                    font-family: $secondary-font;
-                    color: $primary-color;
-                    position: relative;
-                    font-size: 17px;
-                    margin: 0 0 0 30px;
-                    transform: scaleY(0);
-                    transform-origin: bottom center;
-                    transition: all .3s ease;
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        height: 2px;
-                        width: 20px;
-                        background: $primary-color;
-                        top: 50%;
-                        left: -30px;
-                        transform: translateY(-50%);
-                    }
-                }
+                // a{
+                //     text-decoration: none;
+                //     display: inline-block;
+                //     font-family: $secondary-font;
+                //     color: $primary-color;
+                //     position: relative;
+                //     font-size: 17px;
+                //     margin: 0 0 0 30px;
+                //     transform: scaleY(0);
+                //     transform-origin: bottom center;
+                //     transition: all .3s ease;
+                //     &::before{
+                //         position: absolute;
+                //         content: '';
+                //         height: 2px;
+                //         width: 20px;
+                //         background: $primary-color;
+                //         top: 50%;
+                //         left: -30px;
+                //         transform: translateY(-50%);
+                //     }
+                // }
             }
         }
         &_left{
