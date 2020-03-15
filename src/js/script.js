@@ -65,7 +65,7 @@ $(document).ready(function() {
       });
     });
     $('.skill__progress_item').addClass('js-animation');
-    // $this.destroy();
+    this.destroy();
   },{ offset: '50%' });
   
   // Testimonial slider
