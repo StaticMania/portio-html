@@ -124,6 +124,14 @@ gulp.task("images:build", function() {
     );
 });
 
+// Make Zip
+gulp.task('zip', function () {
+  return gulp.src('dist/development/**/*')
+      .pipe(zip('theme-files.zip'))
+      .pipe(gulp.dest('dist/development'))
+});
+
+
 // Plugins
 gulp.task("plugins:build", function() {
   return gulp
@@ -206,6 +214,7 @@ gulp.task("build", function() {
 
 gulp.task("build-prod", function() {
   runSequence(
+    "clean",
     "html:build",
     "js:build",
     "scss:build",
@@ -213,6 +222,7 @@ gulp.task("build-prod", function() {
     "plugins:build",
     "fonts:build",
     "others:build",
+    "zip"
   );
 });
 
