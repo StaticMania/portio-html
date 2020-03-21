@@ -1,4 +1,4 @@
-.port__about{
+.about{
     &_header{
         margin-bottom: 60px;
         span{
@@ -39,6 +39,7 @@
                 left: -17%;
                 z-index: -1;
                 height: 150px;
+                animation: move_top 4s infinite;
                 @include tablet{
                     top: -7%;
                     left: -16%;
@@ -76,11 +77,16 @@
                 margin-left: 0;
                 margin-top: 30px;
             }
-            img{
+            &-blob{
                 position: absolute;
-                top: -40%;
-                right: -40%;
+                top: -55%;
+                right: -22%;
                 z-index: -1;
+                width: 400.369px;
+                height: 362.909px;
+                svg{
+                    width: 140%;
+                }
                 @include tablet{
                     display: none;
                 }
@@ -110,16 +116,22 @@
                     display: inline-block;
                     a{
                         display: block;
-                        padding: 10px 30px;
+                        padding: 15px 30px;
                         text-decoration: none;
                         color: $white;
-                        background: $primary-color;
                         border-radius: 7px;
-                        border: 1px solid transparent;
                         transition: all .3s ease;
+                        border: 1px solid #60636F;
+                        background: transparent;
+                        &.active{
+                            background-color: $primary-color;
+                            border: 1px solid transparent;
+                        }
                         &:hover{
-                            border: 1px solid #60636F;
-                            background: transparent;
+                            border: 1px solid #425FEE;
+                            background: #425FEE;
+                            box-shadow: 0 8px 20px rgba(56, 87, 241, 0.3);
+                            transform: scale(1.03);
                         }
                     }
                     &:not(:last-child){

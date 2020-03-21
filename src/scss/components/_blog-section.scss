@@ -8,6 +8,7 @@
         height: 300px;
         width: 300px;
         img{
+            animation: rotate 20s infinite linear;
             height: 100%;
             width: 100%;
         }
@@ -64,6 +65,7 @@
             font-size: 17px;
             color: #282F49;
             transition: all .3s ease;
+            transform: scale(1);
             @include desktop{
                 position: relative;
                 margin-top: 30px;
@@ -72,6 +74,8 @@
                 background: $primary-color;
                 border: 1px solid transparent;
                 color: #fff;
+                transform: scale(1.03);
+                box-shadow: 0 8px 20px rgba(56, 87, 241, 0.3);
             }
         }
     }
@@ -84,6 +88,8 @@
         &-thumb{
             width: 90%;
             height: 100%;
+            overflow: hidden;
+            border-radius: 20px;
             @include desktop{
                 width: 80%;
                 margin: 0 auto;
@@ -91,7 +97,7 @@
             img{
                 height: 100%;
                 width: 100%;
-                border-radius: 20px;
+                transition: all .3s ease;
             }
         }
         &-content{
@@ -138,6 +144,11 @@
                 }
             }
         }
+        &:hover{
+            .blog__item-thumb img{
+                transform: scale(1.1);
+            }
+        }
     }
     .mobile{
         display: none;
@@ -150,5 +161,12 @@
             display: block;
             text-align: center;
         }
+    }
+}
+@keyframes rotate{
+    from { 
+        -webkit-transform: rotate(0deg); 
+    } to { 
+        -webkit-transform: rotate(360deg); 
     }
 }

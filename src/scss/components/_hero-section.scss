@@ -23,6 +23,7 @@
         position: absolute;
         bottom: 20px;
         left: -130px;
+        animation: move_top 5s infinite linear;
         @include desktop{
             display: none;
         }
@@ -33,11 +34,17 @@
             text-align: center;
             margin-bottom: 60px;
         }
-        svg{
+        .hero_blob{
             position: absolute;
             z-index: -1;
-            top: -40%;
-            left: -40%;
+            top: -45%;
+            left: -45%;
+            height: 440px;
+            width: 440px;
+            svg{
+                width: 100%;
+                position: relative;
+            }
         }
         span{
             font-size: 24px;
@@ -85,10 +92,11 @@
             text-decoration: none;
             border: 1px solid transparent;
             transition: all .3s ease;
+            transform: scale(1);
             &:hover{
-                background: transparent;
-                border: 1px solid $primary-color;
-                color: $primary-color;
+                background: #425FEE;
+                box-shadow: 0 8px 20px rgba(56, 87, 241, 0.3);
+                transform: scale(1.03);
             }
         }
     }
@@ -108,6 +116,7 @@
             transform: translateX(-50%);
             z-index: -1;
             height: 150px;
+            animation: move_left 5s infinite linear;
             img{
                 height: 100%;
                 width: 100%;
@@ -128,6 +137,7 @@
             bottom: 80px;
             left: 0;
             transform: translateX(-50%);
+            transition: all .3s ease;
             @include desktop{
                 bottom: -40px;
                 left: 50%;
@@ -148,11 +158,14 @@
                     height: 100%;
                     width: 100%;
                     background: rgba(0, 0, 0, .6);
+                    z-index: 1;
                 }
                 img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    transform: scale(1);
+                    transition: all .5s ease;
                 }
             }
             .popup-button{
@@ -164,13 +177,52 @@
                 width: 60px;
                 background: #ffffff;
                 border-radius: 50%;
+                z-index: 2;
+                transition: all .3s ease;
                 svg{
                     position: absolute;
                     top: 50%;
-                    left: 50%;
+                    left: 55%;
                     transform: translate(-50%, -50%);
+                    transition: all .3s ease;
+                }
+                &:hover{
+                    background-color: $primary-color;
+                    svg{
+                        path{
+                            fill: #ffffff;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .thumb{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+                .popup-button{
+                    transform: translate(-50%, -50%) scale(1.1);
                 }
             }
         }
+    }
+}
+
+@keyframes move_left{
+    0%{
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(-57%);
+    }
+}
+
+@keyframes move_top{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
     }
 }

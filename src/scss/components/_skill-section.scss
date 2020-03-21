@@ -2,21 +2,21 @@
     position: relative;
     &__background_shape{
         position: absolute;
-        bottom: 3%;
-        right: 5%;
-        height: 200px;
-        width: 200px;
-        img{
-            height: 100%;
+        bottom: 2%;
+        right: 2%;
+        height: 300px;
+        width: 300px;
+        svg{
             width: 100%;
         }
     }
     &__background_pattern{
         position: absolute;
-        bottom: 0;
+        bottom: 5%;
         right: 10%;
         height: 100px;
         width: 100px;
+        animation: move_top 3s infinite linear;
         img{
             height: 100%;
             width: 100%;
@@ -36,6 +36,7 @@
             left: -17%;
             z-index: -1;
             height: 150px;
+            animation: move_top 4s infinite linear;
             img{
                 height: 100%;
                 width: 100%;
