@@ -17,9 +17,9 @@ function PageLoad() {
 
   // Percentage Increment Animation
   var PercentageID = $("#precent"),
-    start = 01,
+    start = 001,
     end = 100,
-    durataion = time;
+    durataion = time; 
   animateValue(PercentageID, start, end, durataion);
 
   function animateValue(id, start, end, duration) {

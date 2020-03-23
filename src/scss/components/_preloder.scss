@@ -10,8 +10,8 @@
 	height: 100vh;
 	.inner{
 		position: absolute;
-		height: 150px;
-		width: 150px;
+		height: 170px;
+		width: 170px;
 		left: 50%;
 		top: 50%;
 		transform: translate( -50%, -50% );
@@ -19,6 +19,10 @@
 		border-top: 5px solid $primary-color;
 		border-radius: 50%;
 		animation: spin 1s infinite linear;
+		@include desktop{
+			height: 150px;
+			width: 150px;
+		}
 	}
 	.percentage {
 		z-index: 100;
@@ -26,7 +30,7 @@
 		opacity: 1;
 		font-weight: 600;
 		font-family: "bebasbold";
-		font-size: 80px;
+		font-size: 60px;
 		letter-spacing: 5px;
 		line-height: 1;
 		position: absolute;
@@ -34,6 +38,9 @@
 		top: 50%;
 		-webkit-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
+		@include desktop{
+			font-size: 50px;
+		}
 	}
 }
 

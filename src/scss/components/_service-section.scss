@@ -77,6 +77,22 @@
             box-shadow: 0px 20px 40px 0px rgba(50,65,141,0.12);
             border-radius: 20px;
             background: $white;
+            &-icon{
+                height: 110px;
+                width: 125px;
+                position: relative;
+                .icon-background{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+                .icon{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 1;
+                }
+            }
             h4{
                 font-size: 24px;
                 font-family: $primary-font;
