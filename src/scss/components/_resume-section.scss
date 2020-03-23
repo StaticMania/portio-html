@@ -1,8 +1,10 @@
 .resume{
     position: relative;
     margin-bottom: 100px;
+    padding: 135px 0;
     @include desktop{
         margin-bottom: 40px;
+        padding: 100px 0;
     }
     &__background{
         background: #1B2031;
@@ -73,7 +75,7 @@
                     font-size: 16px;
                     transition: all .3s ease;
                     &:hover{
-                        background: $primary-color;
+                        background: #425FEE;
                         color: $white;
                         box-shadow: 0 8px 20px 0 rgba(56, 87, 241, 0.30);
                     }
@@ -81,6 +83,9 @@
                         background: $primary-color;
                         color: $white;
                         box-shadow: 0 8px 20px 0 rgba(56, 87, 241, 0.30);
+                        &:hover{
+                            background: #425FEE;
+                        }
                     }
                 }
                 &:nth-child(1){

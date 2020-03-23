@@ -1,6 +1,10 @@
 .testimonial{
     background: #F1F6F9;
     position: relative;
+    padding: 170px 0 150px 0;
+    @include desktop{
+        padding: 100px 0;
+    }
     &__background_shape{
         position: absolute;
         width: 100%;
