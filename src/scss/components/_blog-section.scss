@@ -12,6 +12,9 @@
             height: 100%;
             width: 100%;
         }
+        @include desktop{
+            display: none;
+        }
     }
     &__header{
         span{

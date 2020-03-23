@@ -13,6 +13,9 @@
         svg{
             width: 100%;
         }
+        @include desktop{
+            display: none;
+        }
     }
     &__background_pattern{
         position: absolute;
