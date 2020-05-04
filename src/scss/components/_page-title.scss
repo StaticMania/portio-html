@@ -1,5 +1,5 @@
 .breadCrumb{
-    padding: 230px 0 0;
+    padding: 200px 0 0;
     @include desktop{
         padding: 120px 0 0;
     }
@@ -18,6 +18,8 @@
     }
     .breadcrumb{
         background: none;
+        margin: 0;
+        padding: 0;
         &-item{
             a{
                 font-family: $secondary-font;
