@@ -23,6 +23,41 @@
         align-items: flex-end;
         margin-top: -110px;
         flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        z-index: 5;
+        .shape-1{
+            position: absolute;
+            z-index: -1;
+            transform: rotate(-20deg);
+            top: -43%;
+            left: 2%;
+            animation: moveLeft 5s infinite linear;
+            svg{
+                path{
+                    fill: #ffffff;
+                    opacity: .07;
+                }
+            }
+        }
+        .shape-2{
+            position: absolute;
+            z-index: -1;
+            transform: rotate(80deg);
+            top: 12%;
+            right: -9%;
+            width: 235px;
+            height: 208px;
+            animation: move_top 3s infinite linear;
+            svg{
+                height: 100%;
+                width: 100%;
+                path{
+                    fill: #ffffff;
+                    opacity: .07;
+                }
+            }
+        }
         @include desktop{
             padding: 70px 40px;
         }
@@ -222,5 +257,16 @@
                 }
             }
         }
+    }
+}
+@keyframes moveLeft{
+    0%, 100% {
+        -webkit-transform: translateX(0) rotate(-20deg);
+        transform: translateX(0) rotate(-20deg);
+    }
+    
+    50% {
+        -webkit-transform: translateX(15px) rotate(-20deg);
+        transform: translateX(15px) rotate(-20deg);
     }
 }
