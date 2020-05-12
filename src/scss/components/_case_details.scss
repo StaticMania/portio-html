@@ -63,7 +63,26 @@
             padding: 30px 0;
         }
         .case-details-info-item{
+            position: relative;
             &:not(:last-child){
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    top: 0;
+                    right: -80px;
+                    background: rgba($color:$white, $alpha: .1);
+                    @include desktop{
+                        right: -45px;
+                    }
+                    @include tablet{
+                        right: -15px;
+                    }
+                    @include mobile{
+                        display: none;
+                    }
+                }
                 @include mobile{
                     margin-bottom: 30px;
                 }
@@ -116,6 +135,7 @@
                     color: #7E7E8A;
                     font-size: 15px;
                     line-height: 1;
+                    margin-bottom: 5px;
                 }
                 h5{
                     font-family: $primary-font;

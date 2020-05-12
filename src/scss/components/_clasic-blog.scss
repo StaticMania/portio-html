@@ -3,7 +3,7 @@
         position: relative;
         margin-bottom: 150px;
         &-thumb{
-            width: 90%;
+            width: 88%;
             height: 100%;
             @include desktop{
                 width: 80%;
@@ -16,6 +16,7 @@
             }
         }
         &-content{
+            margin-right: 18px;
             background: #ffffff;
             position: absolute;
             bottom: -100px;
