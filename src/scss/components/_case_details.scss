@@ -5,6 +5,9 @@
         top: 30%;
         left: -7%;
         animation: move_top 5s infinite linear;
+        @include desktop{
+            display: none;
+        }
     }
     .animate-shape{
         position: absolute;
@@ -30,7 +33,7 @@
             height: 100%;
             width: 100%;
         }
-        @include tablet{
+        @include desktop{
             display: none;
         }
     }
@@ -55,6 +58,17 @@
         border-radius: 20px;
         padding: 65px 0;
         margin: 70px 0 80px 0;
+        @include mobile{
+            flex-direction: column;
+            padding: 30px 0;
+        }
+        .case-details-info-item{
+            &:not(:last-child){
+                @include mobile{
+                    margin-bottom: 30px;
+                }
+            }
+        }
         h5{
             margin: 0 0 10px 0;
             font-size: 20px;
@@ -127,6 +141,9 @@
             }
         }
         .social{
+            @include mobile{
+                display: none;
+            }
             ul{
                 margin: 0;
                 padding: 0;

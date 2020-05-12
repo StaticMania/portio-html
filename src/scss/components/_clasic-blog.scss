@@ -65,9 +65,12 @@
         position: relative;
         height: 80px;
         margin-top: 40px;
+        @include desktop{
+            margin-bottom: 100px;
+        }
         .pagination{
             position: absolute;
-            top: 0;
+            top: 15px;
             left: 0;
             li{
                 height: 80px;
@@ -213,11 +216,18 @@
                         }
                     }
                     h5{
-                        font-family: $primary-font;
-                        color: $secondary-color;
-                        font-size: 20px;
-                        line-height: 30px;
                         margin: 0;
+                        a{
+                            font-family: $primary-font;
+                            color: $secondary-color;
+                            font-size: 20px;
+                            line-height: 30px;
+                            transition: all .3s ease;
+                            &:hover{
+                                text-decoration: none;
+                                color: $primary-color;
+                            }
+                        }
                     }
                 }
             }
