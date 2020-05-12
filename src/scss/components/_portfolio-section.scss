@@ -49,11 +49,20 @@
                 }
                 h3{
                     margin: 0 0 20px 0;
-                    font-family: $primary-font;
-                    color: $secondary-color;
-                    font-size: 25px;
+                    a{
+                        font-family: $primary-font;
+                        color: $secondary-color;
+                        font-size: 25px;
+                        line-height: 40px;
+                        transition: all .3s ease;
+                        display: block;
+                        &:hover{
+                            text-decoration: none;
+                            color: $primary-color;
+                        }
+                    }
                 }
-                a{
+                .see-more-btn{
                     text-decoration: none;
                     display: inline-block;
                     font-family: $secondary-font;
@@ -106,7 +115,7 @@
                         box-shadow: 0px 20px 40px 0px rgba(50, 65, 141, 0.12);
                     }
                     .portfolio__element_left-item-content{
-                        a{
+                        .see-more-btn{
                             transform: scaleY(1);
                         }
                     }
@@ -142,7 +151,7 @@
                         box-shadow: 0px 20px 40px 0px rgba(50, 65, 141, 0.12);
                     }
                     .portfolio__element_right-item-content{
-                        a{
+                        .see-more-btn{
                             transform: scaleY(1);
                         }
                     }

@@ -26,6 +26,9 @@
             @include desktop{
                 left: 0;
             }
+            @include mobile{
+               padding: 25px;
+            }
             span{
                 font-size: 16px;
                 font-family: $secondary-font;
@@ -34,6 +37,9 @@
                 position: relative;
                 display: block;
                 line-height: 1;
+                @include mobile{
+                    font-size: 14px;
+                }
                 &::before{
                     position: absolute;
                     content: '';
@@ -54,6 +60,10 @@
                 display: block;
                 text-decoration: none;
                 transition: all .3s ease;
+                @include mobile{
+                    font-size: 20px;
+                    line-height: 28px;
+                }
                 &:hover{
                     color: $primary-color;
                 }
