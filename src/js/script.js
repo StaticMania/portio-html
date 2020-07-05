@@ -91,7 +91,7 @@ $(document).ready(function() {
     arrows: false,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -99,7 +99,7 @@ $(document).ready(function() {
         }
       },
       {
-        breakpoint: 763,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -138,7 +138,7 @@ $(document).ready(function() {
     autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 992,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

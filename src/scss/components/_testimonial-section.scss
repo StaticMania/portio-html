@@ -17,6 +17,9 @@
                 fill: $white;
             }
         }
+        @include mobile-xs{
+            display: none;
+        }
     }
     &__header{
         margin-bottom: 50px;

@@ -1,3 +1,8 @@
+@mixin mobile-s{
+  @media(max-width:375px){
+    @content;
+  }
+}
 @mixin mobile-xs{
   @media(max-width:400px){
     @content;
