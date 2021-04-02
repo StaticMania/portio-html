@@ -13,8 +13,8 @@ sections:
 - type: document
   path: src/partials/component/blog.htm
   label: Blog
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: src/images
+public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
