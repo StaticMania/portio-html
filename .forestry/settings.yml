@@ -9,12 +9,10 @@ sections:
   label: Partials
   create: documents
   match: src/partials/**/*
-  new_doc_ext: ".htm"
+  new_doc_ext: htm
 - type: document
   path: src/partials/component/blog.htm
   label: Blog
-  match: "**/*"
-  read_only: false
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
