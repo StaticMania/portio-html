@@ -25,6 +25,7 @@
             box-shadow: 0px 20px 40px 0px rgba(50,65,141,0.12);
             @include desktop{
                 left: 0;
+                width: 100%;
             }
             span{
                 font-size: 16px;
