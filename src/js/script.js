@@ -68,16 +68,28 @@ $(document).ready(function() {
 		}
   });
   
-  
+  //Copyright Date
+  document.getElementById("newYear").innerHTML = new Date().getFullYear();
 	// Smooth scrolling
-  var scrollLink = $('.scroll');
-	scrollLink.click(function (e) {
-		e.preventDefault();
-		$('body,html').animate({
-			scrollTop: $(this.hash).offset().top
-		}, 1000);
+//   var scrollLink = $('.scroll');
+// 	scrollLink.click(function (e) {
+// 		e.preventDefault();
+// 		$('body,html').animate({
+// 			scrollTop: $(this.hash).offset().top
+// 		}, 1000);
+//   });
+  $("a.scroll").on("click", function (event) {
+    var $anchor = $(this);
+    $("body, html")
+      .stop()
+      .animate({
+          scrollTop: $($anchor.attr("href")).offset().top,
+        }, 1000);
+    event.preventDefault();
+    if (screen.width < 992) {
+      $(".navbar-toggler").click();
+    }
   });
-  
   $('.navbar-nav>li>a').on('click', function () {
 		$('.navbar-collapse').collapse('hide');
 	});
