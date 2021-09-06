@@ -70,14 +70,8 @@ $(document).ready(function() {
   
   //Copyright Date
   document.getElementById("newYear").innerHTML = new Date().getFullYear();
-	// Smooth scrolling
-//   var scrollLink = $('.scroll');
-// 	scrollLink.click(function (e) {
-// 		e.preventDefault();
-// 		$('body,html').animate({
-// 			scrollTop: $(this.hash).offset().top
-// 		}, 1000);
-//   });
+  // Smooth scrolling
+
   $("a.scroll").on("click", function (event) {
     var $anchor = $(this);
     $("body, html")
