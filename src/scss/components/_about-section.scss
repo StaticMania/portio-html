@@ -90,6 +90,9 @@
                 svg{
                     width: 140%;
                 }
+                @media (min-width:1400px) and (max-width:1600px){
+                    right: -12%;
+                }
                 @include tablet{
                     display: none;
                 }
